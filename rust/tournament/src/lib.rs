@@ -28,7 +28,7 @@ impl Stats {
 
     pub fn add_win(&self) -> Self {
         Stats {
-            team: self.team.to_string(),
+            team: self.team.to_owned(),
             wins: self.wins + 1,
             draws: self.draws,
             losses: self.losses,
@@ -36,7 +36,7 @@ impl Stats {
     }
     pub fn add_loss(&self) -> Self {
         Stats {
-            team: self.team.to_string(),
+            team: self.team.to_owned(),
             losses: self.losses + 1,
             draws: self.draws,
             wins: self.wins,
@@ -44,7 +44,7 @@ impl Stats {
     }
     pub fn add_draw(&self) -> Self {
         Stats {
-            team: self.team.to_string(),
+            team: self.team.to_owned(),
             draws: self.draws + 1,
             losses: self.losses,
             wins: self.wins,
